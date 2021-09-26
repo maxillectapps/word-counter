@@ -1,21 +1,20 @@
 /** @format */
-
+import { useState } from "react";
+import Header from "./Components/Header";
+import TextEditor from "./Components/TextEditor";
+import Footer from "./Components/Footer";
 import logo from "./logo.svg";
 
 function App() {
-	return;
-	<>
-		<div class="mb-3">
-			<label for="exampleFormControlTextarea1" class="form-label">
-				Enter Text Below
-			</label>
-			<textarea
-				class="form-control"
-				id="exampleFormControlTextarea1"
-				rows="3"
-			></textarea>
-		</div>
-	</>;
+	const { darkMode, setDarkMode } = useState(false);
+
+	return (
+		<>
+			<Header {...darkMode} />
+			<TextEditor />
+			<Footer />
+		</>
+	);
 }
 
 export default App;
